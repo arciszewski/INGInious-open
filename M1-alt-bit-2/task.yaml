@@ -1,0 +1,31 @@
+accessible: true
+author: Olivier Bonaventure
+context: ''
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: Alternating Bit Protocol
+network_grading: false
+order: 1
+problems:
+    q1:
+        header: Consider the utilisation of the Alternating Bit Protocol to transfer
+            15000 bytes of data. Both hosts are connected via a 1 Gbps link and there
+            is a delay of 2 msec between the two hosts. The sender sends data frames
+            that are 12000 bits long. Assuming that the retransmission timer is set
+            to 10 msec, how long does it take to transfer the 15000 bytes if the third
+            data frame is lost ?
+        type: code_single_line
+        default: ''
+        name: Alternating Bit Protocol in the presence of losses.
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

@@ -1,0 +1,37 @@
+accessible: true
+author: Olivier Bonaventure
+context: ''
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: Bit stuffing
+network_grading: false
+order: 8
+problems:
+    question1:
+        header: 'Consider a bit stuffing technique that reserves the ``01111110``
+            sequence as the frame boundary marker. What is the sequence of bits that
+            it will transmit so send the following sequence of bits : ``0001010010010010010010011``
+            ?'
+        type: code_single_line
+        name: Bit stuffing
+        default: ''
+    question2:
+        header: 'Consider a bit stuffing technique that reserves the ``01111110``
+            sequence as the frame boundary marker. What is the sequence of bits that
+            it will transmit so send the following sequence of bits : ``0111111001111110``
+            ?'
+        default: ''
+        name: Bit stuffing
+        type: code_single_line
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

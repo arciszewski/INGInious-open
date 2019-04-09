@@ -1,0 +1,53 @@
+#!/bin/python3
+
+# bit stuffing, receiver11 
+# received 01111110 010100110101100011010 01111110
+# expected 010100110101100011010
+from inginious import input, feedback
+
+valid="010100110101100011010"
+answer = input.get_input("receiver1")
+grade=0
+answer = ''.join(answer.split()) # remove spaces
+if (answer==valid):
+	feedback.set_problem_result("success","receiver1")
+	feedback.set_problem_feedback("Correct","receiver1")
+	grade+=33    
+else:
+	feedback.set_problem_result("failed","receiver1")
+	response="Your answer is incorrect.\n"
+	if not(len(answer)==24):
+		response+="The expected frame is 24 bits long"
+	feedback.set_problem_feedback(response,"receiver1")
+    
+valid="0"
+answer = input.get_input("receiver2")
+answer = ''.join(answer.split()) # remove spaces
+if (answer==valid):
+	feedback.set_problem_result("success","receiver2")
+	feedback.set_problem_feedback("Correct","receiver2")
+	grade+=33
+else:
+	feedback.set_problem_result("failed","receiver2")
+	response="Your answer is incorrect. The bit sequence is invalid since it does not contain the boundary byte.\n"
+	feedback.set_problem_feedback(response,"receiver2")   
+    
+valid="00110100" 
+answer = input.get_input("receiver3")
+answer = ''.join(answer.split()) # remove spaces
+if (answer==valid):
+	feedback.set_problem_result("success","receiver3")
+	feedback.set_problem_feedback("Correct","receiver3")
+	grade+=34    
+else:
+	feedback.set_problem_result("failed","receiver3")
+	response="Your answer is incorrect. Look at the boundary bytes in the received sequence of bits\n"
+	feedback.set_problem_feedback(response,"receiver3") 
+    
+
+feedback.set_grade(grade)
+
+if grade==100:
+	feedback.set_global_result("success")
+else:
+	feedback.set_global_result("failed")

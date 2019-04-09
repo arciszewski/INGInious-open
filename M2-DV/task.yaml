@@ -1,0 +1,39 @@
+accessible: true
+author: Olivier Bonaventure
+context: |-
+    Consider the network shown in the figure below. Assuming that all link weights are set to 1, what is the distance vector message that the routing protocol running on these routers will send once the network has converged ?
+
+    .. container:: text-center
+
+        .. image:: M2-DV/network-0.png
+            :width: 200px
+
+    Express your answer as a list of pairs separated by commas. In each pair, ``<id>:<int>``,  where ``<id>`` is the name of the router and ``<int>`` an integer representing a distance. Assume the basic version of Distance Vector (i.e. no split horizon and no poisoning)
+environment: java7mockito
+evaluate: best
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: Distance Vector Routing
+network_grading: false
+problems:
+    q1:
+        language: ''
+        name: Distance vector for router R0
+        header: Please encode here the distance vector that ``R0`` will send once
+            the network has converged.
+        type: code_single_line
+    q2:
+        type: code
+        header: Please encode here the distance vector that ``R4`` will send once
+            the network has converged.
+        name: Distance vector for router R4
+        language: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
+order: 4

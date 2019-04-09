@@ -1,0 +1,47 @@
+accessible: true
+author: Olivier Bonaventure
+context: |+
+    Consider a host that implements the character stuffing technique described in section `Framing <http://cnp3book.info.ucl.ac.be/2nd/html/principles/reliability.html#framing>`_.
+
+environment: quartus
+evaluate: best
+groups: false
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: Character stuffing (receiver)
+network_grading: false
+problems:
+    q1:
+        name: A received frame
+        type: code_single_line
+        language: ''
+        header: |
+            A receiver receives the following sequence of bytes :
+            ``DLE,STX,A,X,C,DLE,ETX``
+            Remove the characters that were added by the character stuffing on the sender and return the received frame as a sequence of characters separated by commas (,).
+    q2:
+        name: A received frame
+        type: code_single_line
+        header: |+
+            A receiver receives the following sequence of bytes :
+            ``ETX,DLE,DLE,A,DLE,STX,B,DLE,ETX,C``
+            Remove the characters that were added by the character stuffing on the sender and return the received frame as a sequence of characters separated by commas (,).
+
+        language: ''
+    q3:
+        type: code_single_line
+        header: |+
+            A receiver receives the following sequence of bytes :
+            ``ETX,A,DLE,STX,DLE,DLE,DLE,DLE,STX,B,DLE,DLE,ETX,ETX,DLE,ETX,DLE``
+            Remove the characters that were added by the character stuffing on the sender and return the received frame as a sequence of characters separated by commas (,).
+
+        language: ''
+        name: A received frame
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
+order: 3

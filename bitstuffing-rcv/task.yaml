@@ -1,0 +1,42 @@
+accessible: true
+author: ''
+context: A bit stuffing receiver must remove the frame boundaries and remove the stuffed
+    bits to recover the transmitted frame. Consider a bit stuffing technique where
+    the sender uses ``01111110`` as the frame boundary.
+environment: math
+evaluate: best
+groups: false
+limits:
+    output: '2'
+    memory: '100'
+    time: '30'
+name: Bit stuffing (receiver side)
+network_grading: false
+problems:
+    receiver1:
+        language: ''
+        type: code_single_line
+        header: 'A host receives the following sequence of bits : ``0111111001010011010110001101001111110``.
+            If this sequence is valid, extract the transmitted frame. otherwise, return
+            ``0``.'
+        name: A bit stuffing receiver
+    receiver2:
+        language: ''
+        name: A bit stuffing receiver
+        header: 'A host receives the following sequence of bits : ``0101111001010011010110001101001011110``.
+            If this sequence is valid, extract the transmitted frame. otherwise, return
+            ``0``.'
+        type: code_single_line
+    receiver3:
+        type: code_single_line
+        name: A bit stuffing receiver
+        header: 'A host receives the following sequence of bits : ``01011110011111110111111000110100011111101011110``.
+            If this sequence is valid, extract the transmitted frame. otherwise, return
+            ``0``.'
+        language: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
+order: 7

@@ -1,0 +1,39 @@
+accessible: true
+author: ''
+context: |-
+    Consider the network shown in the figure below. Assuming that all link weights are set to 1, what is the link state packet that the routing protocol running on these routers will send once the network has converged ?
+
+    .. container:: text-center
+
+        .. image:: M2-LS/network-0.png
+            :width: 200px
+
+    Express your answer as a list fields separated by commas. For each field, use the ``<field>:<value>`` format,  where ``<field>`` is the name of the field and ``<value>`` the value of this specific field. If you need to specify a distance to a router, specify it as a pair that contains the router name as a field and the distance as the value.
+environment: dafny
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: Link State Routing
+network_grading: false
+problems:
+    q1:
+        default: ''
+        type: code_single_line
+        header: Provide the link state packet sent by router R0
+        name: Link state packet for router R0
+    q2:
+        type: code_single_line
+        default: ''
+        header: Provide the link state packet sent by router R4
+        name: Link state packet for router R4
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0
+order: 6

@@ -1,0 +1,37 @@
+accessible: true
+author: ''
+context: |-
+    Consider the network shown in the figure below. Assuming that all link weights are set to 1, what is the distance vector message that the routing protocol running on these routers will send once the network has converged assuming that all routers use poisoning ?
+
+       .. container:: text-center
+
+                .. image:: M2-DVP/network-0.png
+                   :width: 200px
+
+    Express your answer as a list of pairs separated by commas. In each pair, ``<id>:<int>``,  where ``<id>`` is the name of the router and ``<int>`` an integer representing a distance. Use ``99`` as the distance to indicate a poisonned route.
+environment: java7mockito
+evaluate: best
+groups: false
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: Distance vector routing with poisoning
+network_grading: false
+problems:
+    q1:
+        language: ''
+        name: Distance vector sent by router R0 to router R1
+        header: What is the poisonned distance vector sent by ``R0`` to ``R1`` ?
+        type: code_single_line
+    q2:
+        type: code_single_line
+        header: What is the poisonned distance vector sent by ``R0`` to ``R3`` ?
+        name: Distance vector sent by router R0 to router 3
+        language: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
+order: 5

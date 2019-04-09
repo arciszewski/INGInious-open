@@ -1,0 +1,45 @@
+accessible: true
+author: ''
+context: ''
+environment: math
+evaluate: best
+groups: false
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: Character stuffing (sender)
+network_grading: false
+problems:
+    q1:
+        name: Character stuffing (sender side)
+        type: code_single_line
+        language: ''
+        header: |-
+            Consider a datalink layer protocol that uses character stuffing as described in section `Framing  <http://cnp3book.info.ucl.ac.be/2nd/html/principles/reliability.html#framing>`_
+
+            As the transmitter, you need to send a frame that contains ``A,B,C``.
+
+            Provide your answer as a comma separated sequence of characters.
+    q2:
+        name: Character stuffing (sender side)
+        type: code_single_line
+        header: |-
+            Consider the same sender as above. You need to send a frame that contains ``A,DLE,STX,B,DLE,ETX,C``.
+
+            Provide your answer as a comma separated sequence of characters.
+        language: ''
+    q3:
+        type: code_single_line
+        header: |-
+            Consider the same sender as above. You need to send a frame that contains ``DLE,DLE,STX,B,DLE,ETX,ETX``.
+
+            Provide your answer as a comma separated sequence of characters.
+        language: ''
+        name: Character stuffing (sender side)
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
+order: 2

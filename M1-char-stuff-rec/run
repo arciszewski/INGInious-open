@@ -1,0 +1,78 @@
+#!/bin/python3
+
+# character stuffing, q1 received DLE,STX,A,X,C,DLE,ETX
+# expected output:  A,X,C
+from inginious import input, feedback
+
+valid="A,X,C"
+begin="DLE,STX"
+end="DLE,ETX"
+grade=0
+answer = input.get_input("q1")
+answer = ''.join(answer.split()) # remove spaces
+answer = answer.upper()  # to upper case
+if (answer==valid):
+	feedback.set_problem_result("success","q1")
+	feedback.set_problem_feedback("Correct","q1")
+	grade+=33
+else:
+	feedback.set_problem_result("failed","q1")
+	response="Your answer to the first question is incorrect.\n"
+	if (answer.startswith(begin)):
+		response+="A receiver removes the DLE,STX bytes that mark the beginning of the frame\n"
+	if (answer.endswith(end)):
+		response+="A receiver removes the DLE,ETX bytes that mark the end of the frame\n"
+	feedback.set_problem_feedback(response,"q1")
+    
+    
+# ETX,DLE,DLE,A,DLE,STX,B,DLE,ETX,C
+
+valid="B"
+begin="DLE,STX"
+end="DLE,ETX"
+payload="DLE,DLE"
+answer = input.get_input("q2")
+answer = ''.join(answer.split()) # remove spaces
+answer = answer.upper()  # to upper case
+if (answer==valid):
+	feedback.set_problem_result("success","q2")
+	feedback.set_problem_feedback("Correct","q2")
+	grade+=33
+else:
+	feedback.set_problem_result("failed","q2")
+	response="Your answer to the second question is incorrect.\n"
+
+	response+="A valid frame always starts with "+begin+" \n"
+
+	response+="A valid frame always ends with "+end+"\n"
+
+	feedback.set_problem_feedback(response,"q2")
+
+# Q3 ETX,A,DLE,STX,DLE,DLE,DLE,DLE,STX,B,DLE,DLE,ETX,ETX,DLE,ETX,DLE
+# DLE,DLE,STX,B,DLE,ETX,ETX
+
+valid="DLE,DLE,STX,B,DLE,ETX,ETX"
+begin="DLE,STX"
+end="DLE,ETX"
+payload="DLE,DLE,DLE"
+answer = input.get_input("q3")
+answer = ''.join(answer.split()) # remove spaces
+answer = answer.upper()  # to upper case
+if (answer==valid):
+	feedback.set_problem_result("success","q3")
+	feedback.set_problem_feedback("Correct","q3")
+	grade+=34
+else:
+	feedback.set_problem_result("failed","q3")
+	response="Your answer to the second question is incorrect.\n"
+
+	feedback.set_problem_feedback(response,"q3")
+
+    
+feedback.set_grade(grade)  
+if grade==100:
+	feedback.set_global_result("success")
+else:
+	feedback.set_global_result("failed")
+#end
+    
