@@ -1,0 +1,37 @@
+accessible: false
+author: Olivier Bonaventure
+context: 'Internet checksums and CRCs have different error detection capabilities. '
+environment: pyjavacpp
+evaluate: best
+groups: false
+input_random: '1'
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: Checksums and CRCs
+network_grading: false
+problems:
+    q1:
+        header: |+
+            .. raw:: html
+
+               Consider a simple frame that is represented as the following bitstring :  <b><span id="ipr1"></span></b>
+
+               Can you find a bitstring that is different from this frame but has the same checksum ?
+
+               <script>
+               var frame = parseInt(input["@random"][0] * 1000000000 + 1000000000);
+               document.getElementById("ipr1").innerHTML = frame.toString(2);
+               </script>
+
+        name: Internet checksum
+        default: ''
+        type: code_single_line
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0
+order: 5
