@@ -21,7 +21,7 @@ def almost(answer,value):
 	else:	
 		return False
 
-sol=11*delay*2+timer*2
+sol=11*delay*2+timer
 
 answer = input.get_input("q1")
 if(isfloat(answer)):
